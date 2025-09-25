@@ -1,0 +1,143 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8c8dc, #b565d9);
+  display: flex;
+  flex-direction: column;
+}
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  padding: 15px 0;
+  z-index: 1000;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  height: auto;
+}
+
+header nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+header nav a {
+  text-decoration: none;
+  background-color: #fff;
+  color: #b565d9;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 25px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+header nav a:hover {
+  background-color: #b565d9;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+
+main {
+  flex: 1;
+  margin-top: 120px;
+  margin-bottom: 100px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+fieldset {
+  border: 2px solid #fff;
+  padding: 25px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  width: 320px;
+  text-align: center;
+}
+
+legend {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+
+input[type="text"],
+input[type="password"] {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+
+button, input[type="submit"] {
+  background: #fff;
+  color: #b565d9;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+button:hover, input[type="submit"]:hover {
+  background: #b565d9;
+  color: #fff;
+  transform: scale(1.1) rotate(-1deg);
+  box-shadow: 0 0 12px #fff;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  z-index: 1000;
+}
+
+footer img {
+  margin: 0 8px;
+  transition: transform 0.3s ease;
+}
+
+footer img:hover {
+  transform: scale(1.2);
+}
+

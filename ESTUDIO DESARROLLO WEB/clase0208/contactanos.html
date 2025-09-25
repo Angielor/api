@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="inicio.css">
+  <title>Contáctanos</title>
+</head>
+<body>
+  <header>
+    <div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="registro.html">Registro</a></li>
+          <li><a href="inicio.html">Iniciar</a></li>
+          <li><a href="formulario.html" class="active">Formulario</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>CONTÁCTANOS</h1>
+    <section>
+      <p>Déjanos tus inquietudes y te responderemos lo antes posible.</p>
+
+      <form class="contact-form" id="contactForm">
+        <input type="text" placeholder="Tu nombre" required>
+        <input type="email" placeholder="Tu correo electrónico" required>
+        <input type="tel" placeholder="Tu número de teléfono" required>
+        <input type="text" placeholder="Tu dirección" required>
+        <textarea placeholder="Escribe tu mensaje..." rows="5" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <p><strong>Dirección:</strong> Calle 35 #04/98 Sur</p>
+      <p><strong>Teléfono:</strong> 3227609560</p>
+      <p><strong>Correo:</strong> contacto@digital.com</p>
+    </div>
+    <div>
+      <a href="https://pin.it/7MWR1WKtN" target="_blank">
+        <img src="https://i.pinimg.com/1200x/43/85/a5/4385a5479214954fa9fab6f1a778623f.jpg" alt="Instagram" width="40">
+      </a>
+      <a href="https://pin.it/5pS68987V" target="_blank">
+        <img src="https://i.pinimg.com/1200x/b1/9c/b7/b19cb7de38d8fa0424cf9717aade29d8.jpg" alt="Facebook" width="40">
+      </a>
+      <a href="https://pin.it/27YA7nIMG" target="_blank">
+        <img src="https://i.pinimg.com/736x/ca/19/81/ca19812806c52bb4333e4129db7a743d.jpg" alt="YouTube" width="40">
+      </a>
+    </div>
+  </footer>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h2>✅ ¡Mensaje enviado!</h2>
+      <p>Gracias por contactarnos, te responderemos pronto.</p>
+      <button id="closeModal">Cerrar</button>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById("contactForm");
+    const modal = document.getElementById("modal");
+    const closeModal = document.getElementById("closeModal");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault(); 
+      modal.style.display = "flex"; 
+      form.reset();
+    });
+
+    closeModal.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>
